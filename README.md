@@ -25,9 +25,9 @@ var resources = window.performance.getEntriesByType("resource");
 The **resources** is an array of [PerformanceResourceTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming) objects. The PerformanceResourceTiming object contains the URL of the requested resource, timing metrics and resource size data. The browser has a resource timing buffer to hold PerformanceResourceTiming objects. Whenever the browser starts to fetch a resource, it will create a new PerformanceResourceTiming object and store into the buffer until the buffer is full.
 
 #### Steps performed by the script are as follows:
-1. Open a web-application /Webpage mentioned in config file
-2. Use Selenium to perform operations click on HTML elements, query the DOM structure,modify values,submitting a form,uploading a file etc.
-3. Fetch the network requests/url from config file which you want to validate/count. 
+1. Open a web-application /Webpage (_here I have used Wikipedia webpage_) mentioned in config file
+2. Use Selenium to perform operations like click on HTML elements, query the DOM structure,modify values,submitting a form,uploading a file etc.
+3. Fetch the network requests/url (_**conditions**_) from config file which you want to validate/count. 
 3. Execute custom Javascript Resource Timing API using JavascriptExecutor, which will return all the network requests.
 4. Compare the network requests from **step4** with the pre-defined network requests from **step3**.
 5. Mark the pre-defined request as **PASS** if it matches with any of the actual page requests.
